@@ -29,22 +29,22 @@ from telethon.errors.rpcerrorlist import (
     ParticipantJoinMissingError,
     ChatSendMediaForbiddenError,
 )
-from pyUltroid import HNDLR, LOGS, asst, udB, vcClient
-from pyUltroid._misc._decorators import compile_pattern
-from pyUltroid.fns.helper import (
+from pyPuii import HNDLR, LOGS, asst, udB, vcClient
+from pyPuii._misc._decorators import compile_pattern
+from pyPuii.fns.helper import (
     bash,
     downloader,
     inline_mention,
     mediainfo,
     time_formatter,
 )
-from pyUltroid.fns.admins import admin_check
-from pyUltroid.fns.tools import is_url_ok
-from pyUltroid.fns.ytdl import get_videos_link
-from pyUltroid._misc import owner_and_sudos, sudoers
-from pyUltroid._misc._assistant import in_pattern
-from pyUltroid._misc._wrappers import eod, eor
-from pyUltroid.version import __version__ as UltVer
+from pyPuii.fns.admins import admin_check
+from pyPuii.fns.tools import is_url_ok
+from pyPuii.fns.ytdl import get_videos_link
+from pyPuii._misc import owner_and_sudos, sudoers
+from pyPuii._misc._assistant import in_pattern
+from pyPuii._misc._wrappers import eod, eor
+from pyPuii.version import __version__ as UltVer
 from telethon import events
 from telethon.tl import functions, types
 from telethon.utils import get_display_name
@@ -92,7 +92,7 @@ class Player:
         try:
             await vcClient(
                 functions.phone.CreateGroupCallRequest(
-                    self._chat, title="🎧 Ultroid Music 🎶"
+                    self._chat, title="🎧 Puii Music 🎶"
                 )
             )
         except Exception as e:
